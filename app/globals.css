@@ -5,3 +5,32 @@
 html {
   color-scheme: light;
 }
+
+.font-sans-jp {
+  font-family: var(--font-sans-jp), sans-serif;
+}
+.font-serif-jp {
+  font-family: var(--font-serif-jp), serif;
+}
+.font-maru {
+  font-family: var(--font-maru), sans-serif;
+}
+.font-shippori {
+  font-family: var(--font-shippori), serif;
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+}
+
+.film-grain {
+  position: relative;
+}
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+}
