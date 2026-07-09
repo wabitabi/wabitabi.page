@@ -18,20 +18,42 @@ export default function WarmMinimalPage() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-4xl px-6 pb-24 pt-16 text-center">
-        <p className="mb-10 text-xs tracking-[0.4em] text-[#b08b5e]">KUMAMOTO, JAPAN</p>
-        <h1 className="text-3xl font-light leading-[2.2] tracking-wider md:text-4xl">
+      {/* ファーストビュー：16:9画像＋アニメーション＋英語コピー */}
+      <section className="px-0 md:px-6">
+        <div className="relative mx-auto aspect-video max-w-6xl overflow-hidden">
+          <img
+            src={photos[3].src}
+            alt={photos[3].alt}
+            className="animate-hero-zoom h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/30" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
+            <p className="animate-fade-up animation-delay-1200 mb-5 text-[10px] tracking-[0.5em] text-white/85 md:text-xs">
+              WABITABI — KUMAMOTO, JAPAN
+            </p>
+            <h1 className="animate-tracking-in text-2xl font-light uppercase leading-relaxed drop-shadow-md md:text-5xl">
+              Creating
+              <span className="mx-3 italic text-[#f2cf8d]">a Vibrant</span>
+              Society
+            </h1>
+            <span className="animate-fade-up animation-delay-1200 mt-6 h-px w-16 bg-white/60" aria-hidden />
+          </div>
+        </div>
+      </section>
+
+      {/* ビジョン：16:9画像の下 */}
+      <section className="mx-auto max-w-4xl px-6 pb-24 pt-20 text-center">
+        <p className="animate-fade-up animation-delay-300 mb-10 text-xs tracking-[0.4em] text-[#b08b5e]">
+          OUR VISION
+        </p>
+        <h2 className="animate-fade-up animation-delay-600 text-3xl font-light leading-[2.2] tracking-wider md:text-4xl">
           {VISION_LINES[0]}
           <br />
           {VISION_LINES[1]}
-        </h1>
-        <p className="mt-10 text-sm leading-loose text-[#8a7a66]">{SUB_COPY}</p>
-        <div className="mx-auto mt-16 max-w-2xl">
-          <img src={photos[0].src} alt={photos[0].alt} className="w-full" />
-          <p className="mt-3 text-right text-[10px] tracking-widest text-[#b08b5e]">
-            — {photos[0].caption}
-          </p>
-        </div>
+        </h2>
+        <p className="animate-fade-up animation-delay-1200 mt-10 text-sm leading-loose text-[#8a7a66]">
+          {SUB_COPY}
+        </p>
       </section>
 
       <section className="border-t border-[#e5dccb] py-24">
