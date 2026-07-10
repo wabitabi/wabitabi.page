@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { PageHero } from "@/components/site/PageHero";
 import { CategoryFilter } from "@/components/site/CategoryFilter";
-import { photos } from "@/lib/photos";
+import { photos, danangPhotos, Photo } from "@/lib/photos";
 import { resultItems } from "@/lib/data/results";
 import { BUSINESS_CATEGORY_LABEL, BusinessCategory } from "@/lib/types";
 
 export const metadata = { title: "実績紹介｜株式会社WABITABI" };
 
-// カテゴリごとの代表写真（実写真導入までのプレースホルダー割当）
-const categoryPhoto: Record<BusinessCategory, number> = {
-  wellbeing: 4,
-  ryugaku: 3,
-  sns: 2,
+// カテゴリごとの代表写真（くまもと留学相談室は実写真が届くまでプレースホルダー）
+const categoryPhoto: Record<BusinessCategory, Photo> = {
+  wellbeing: danangPhotos.street,
+  ryugaku: photos[3],
+  sns: danangPhotos.cafe,
 };
 
 interface ResultsPageProps {
@@ -41,7 +41,7 @@ export default async function ResultsPage({ searchParams }: ResultsPageProps) {
               <Link key={item.slug} href={`/results/${item.slug}`} className="group block">
                 <div className="overflow-hidden">
                   <img
-                    src={photos[categoryPhoto[item.category]].src}
+                    src={categoryPhoto[item.category].src}
                     alt={item.title}
                     className="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                   />

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { photos } from "@/lib/photos";
+import { photos, danangPhotos, Photo } from "@/lib/photos";
 import { resultItems } from "@/lib/data/results";
 import { BUSINESS_CATEGORY_LABEL, BusinessCategory } from "@/lib/types";
 import { Eyebrow } from "@/components/site/Eyebrow";
 
-const categoryPhoto: Record<BusinessCategory, number> = {
-  wellbeing: 4,
-  ryugaku: 3,
-  sns: 2,
+const categoryPhoto: Record<BusinessCategory, Photo> = {
+  wellbeing: danangPhotos.street,
+  ryugaku: photos[3],
+  sns: danangPhotos.cafe,
 };
 
 interface ResultDetailPageProps {
@@ -36,7 +36,7 @@ export default async function ResultDetailPage({ params }: ResultDetailPageProps
         </h1>
 
         <img
-          src={photos[categoryPhoto[item.category]].src}
+          src={categoryPhoto[item.category].src}
           alt={item.title}
           className="animate-fade-up animation-delay-600 mt-14 aspect-video w-full object-cover"
         />

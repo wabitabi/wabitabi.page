@@ -1,12 +1,44 @@
-// チャットで共有された5枚の写真のメタ情報。
-// 現在はSVGプレースホルダーを参照。実写真を public/images/photo-N.jpg として
-// 追加したら、src の拡張子を .jpg に変えるだけで全デザイン案に反映される。
 export interface Photo {
   id: number;
   src: string;
   alt: string;
   caption: string;
 }
+
+// アップロード済みの実写真
+export const heroPhoto: Photo = {
+  id: 100,
+  src: "/images/hero-sky.jpg",
+  alt: "夕暮れの空を飛行機雲を残して上昇していく飛行機",
+  caption: "空へ、世界へ",
+};
+
+export const danangPhotos = {
+  market: {
+    id: 101,
+    src: "/images/danang-market.png",
+    alt: "ベトナムの市場で果物を手に微笑む女性",
+    caption: "ベトナムの市場にて",
+  },
+  street: {
+    id: 102,
+    src: "/images/danang-street.png",
+    alt: "ヘルメットをかぶってバイクに乗り振り返る女性",
+    caption: "ダナンの街を駆ける",
+  },
+  cafe: {
+    id: 103,
+    src: "/images/danang-cafe.png",
+    alt: "ベトナムのカフェで現地の女性と笑い合う女性",
+    caption: "カフェでの語らい",
+  },
+  beach: {
+    id: 104,
+    src: "/images/danang-beach.png",
+    alt: "夕陽のダナンビーチで両手を広げる女性",
+    caption: "ダナンビーチの夕暮れ",
+  },
+} satisfies Record<string, Photo>;
 
 export const photos: Photo[] = [
   {

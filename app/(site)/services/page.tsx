@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { photos } from "@/lib/photos";
+import { photos, danangPhotos } from "@/lib/photos";
 import { PageHero } from "@/components/site/PageHero";
 import { Eyebrow } from "@/components/site/Eyebrow";
 
@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <section id="wellbeing" className="scroll-mt-20 py-24">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-12 md:flex-row">
-            <img src={photos[4].src} alt={photos[4].alt} className="w-full max-w-sm" />
+            <img src={danangPhotos.beach.src} alt={danangPhotos.beach.alt} className="w-full max-w-sm object-cover" />
             <div className="flex-1">
               <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">01 — WELLBEING RYUGAKU</p>
               <h2 className="mb-6 text-2xl font-light tracking-wide">Wellbeing留学</h2>
@@ -77,7 +77,7 @@ export default function ServicesPage() {
       <section id="sns" className="scroll-mt-20 py-24">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-12 md:flex-row">
-            <img src={photos[2].src} alt={photos[2].alt} className="w-full max-w-sm" />
+            <img src={danangPhotos.cafe.src} alt={danangPhotos.cafe.alt} className="w-full max-w-sm object-cover" />
             <div className="flex-1">
               <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">03 — SNS PR</p>
               <h2 className="mb-6 text-2xl font-light tracking-wide">SNS PR事業</h2>

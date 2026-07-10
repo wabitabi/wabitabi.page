@@ -1,4 +1,4 @@
-import { photos } from "@/lib/photos";
+import { photos, danangPhotos } from "@/lib/photos";
 import { VISION, CEO_NAME, CEO_TITLE } from "@/lib/site-content";
 import { PageHero } from "@/components/site/PageHero";
 import { Eyebrow } from "@/components/site/Eyebrow";
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <PageHero
         en="About Us"
         title="私たちについて"
-        lead="「留学」や「海外挑戦」を、特別な人だけのものにしない。私たちの原点と、大切にしている考え方をご紹介します。"
+        lead="世界を見ることは、人生の選択肢を自分の手で広げること。情報の格差を、挑戦の格差にしないために——。私たちの原点をご紹介します。"
       />
 
       {/* ビジョン・ミッション */}
@@ -65,23 +65,67 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl px-6">
           <Eyebrow className="mb-12 text-center">Our Story</Eyebrow>
           <h2 className="text-center text-xl font-light tracking-wide">創業ストーリー</h2>
-          <div className="mt-12 space-y-8 text-sm leading-[2.4] text-taupe">
+
+          <div className="mt-16 text-center">
+            <p className="text-2xl font-light leading-[2] tracking-wider md:text-3xl">
+              「こんな生き方があるんだ。」
+            </p>
+            <p className="mt-4 text-sm tracking-[0.2em] text-taupe">海外に出て、衝撃を受けた。</p>
+          </div>
+
+          <div className="mt-16 space-y-8 text-sm leading-[2.4] text-taupe">
             <p>
-              はじめての海外で感じた心細さと、それを超えた先にあった「世界の広さ」。33カ国を旅するなかで
-              出会った人たちは、誰もが自分の物差しで人生を選んでいました。
+              高校時代、偏差値の高い大学に入ることが正解だと信じて疑わなかった。周りの友人も、先生も、
+              大人たちも、それが当たり前に目指すべき姿だと言っていたから。
             </p>
             <p>
-              ハンガリーでの留学、インドでのインターン。日常の外に出るたびに、自分の輪郭がはっきりして
-              いく感覚がありました。この体験を、地元・熊本の若い人たちに届けたい——。
+              目標にしていた大学に合格した時、これでもう安心だと思った。けれど大学生活を過ごすうちに、
+              自分はその大学に所属しているだけで、何者でもないことに気づいていく。大学に入ることを
+              ゴールにしていた私は、合格した瞬間に試合が終わったつもりでいた。でも、人生はまだ始まった
+              ばかりで、その4分の1にも満たなかった。
             </p>
             <p>
-              その想いから、東京ではなく熊本で起業することを選びました。地域の学校や自治体と連携しながら、
-              「海外挑戦」を誰にとっても身近な選択肢にしていきます。
+              東京に出て、満員電車に揺られる人たちの表情を見た。新社会人になった先輩たちの話を聞いた。
+              日常の一部のように感じてしまうほど頻繁に起きる、駅のホームでの出来事もあった。そんな景色の
+              中で過ごすうちに、「社会人ってきつくて、辛くて、楽しくないものなんだ」と思うようになって
+              いった。
+            </p>
+            <p>
+              良い大学に行き、名の知れた企業に就職することが人生における「正解」だと、ずっと疑わずに
+              生きてきた。でも実際に働く大人たちを目の当たりにして、このまま周りに流されて卒業していいの
+              だろうかと、初めて自分の将来に不安を抱いた。
+            </p>
+            <p className="border-l-2 border-gold pl-6 text-ink">そこで大学を休学し、海外に出ることにした。</p>
+            <p>
+              海外で暮らす中で、さまざまな働き方、さまざまな生き方をしている人たちに出会った。目を輝かせ
+              ながら、心から楽しそうに働く社会人たちと関わる中で、はじめて実感した。「良い大学に行き、
+              良い企業に就くことだけが正解じゃない」——頭ではなく、体でそれを理解した瞬間だった。
+            </p>
+            <p>
+              その経験がきっかけで、世界にはまだ知らないだけで、こんなにも多様な生き方があるのだと感じ、
+              学生時代のうちに33カ国を旅することになった。
+            </p>
+            <p className="text-ink">
+              世界を見るということは、ただ新しい景色に出会うことではない。自分の人生の選択肢を、自分の手で
+              広げていくということだ。
+            </p>
+            <p>
+              けれど、地方ではまだ「海外は怖い、危ない」というイメージが根強く、リアルな情報になかなか
+              出会えない。その情報の格差が、そのまま挑戦の格差になってしまっている。
+            </p>
+            <p>
+              だから私は、自分らしく生きるための選択肢を広げる挑戦を、もっと多くの人に届けたいと思った。
+            </p>
+            <p className="text-ink">
+              生まれ育ったこの熊本で、その一歩をサポートしたいと思い、会社を立ち上げた。
             </p>
           </div>
+
           <div className="mt-14">
-            <img src={photos[0].src} alt={photos[0].alt} className="w-full" />
-            <p className="mt-3 text-right text-[10px] tracking-widest text-gold">— {photos[0].caption}</p>
+            <img src={danangPhotos.market.src} alt={danangPhotos.market.alt} className="w-full" />
+            <p className="mt-3 text-right text-[10px] tracking-widest text-gold">
+              — {danangPhotos.market.caption}
+            </p>
           </div>
         </div>
       </section>

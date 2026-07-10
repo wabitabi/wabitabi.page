@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { photos } from "@/lib/photos";
+import { photos, heroPhoto, danangPhotos, Photo } from "@/lib/photos";
 import { VISION_LINES, SUB_COPY, PILLARS, CEO_MESSAGE, CEO_NAME, CEO_TITLE } from "@/lib/site-content";
 import { newsItems } from "@/lib/data/news";
 import { resultItems } from "@/lib/data/results";
@@ -10,6 +10,13 @@ export const metadata = {
   title: "株式会社WABITABI｜海外挑戦を通じて、自分らしく生きる人を増やす",
 };
 
+// 事業ごとの写真（くまもと留学相談室は実写真が届くまでプレースホルダー）
+const pillarPhoto: Record<string, Photo> = {
+  wellbeing: danangPhotos.beach,
+  ryugaku: photos[3],
+  sns: danangPhotos.cafe,
+};
+
 export default function TopPage() {
   return (
     <>
@@ -17,11 +24,11 @@ export default function TopPage() {
       <section className="px-0 md:px-6 md:pt-6">
         <div className="relative mx-auto aspect-video max-w-6xl overflow-hidden">
           <img
-            src={photos[3].src}
-            alt={photos[3].alt}
+            src={heroPhoto.src}
+            alt={heroPhoto.alt}
             className="animate-hero-zoom h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/35" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
             <p className="animate-fade-up animation-delay-1200 mb-5 text-[10px] tracking-[0.5em] text-white/85 md:text-xs">
               WABITABI — KUMAMOTO, JAPAN
@@ -59,7 +66,11 @@ export default function TopPage() {
                 key={p.id}
                 className={`flex flex-col items-center gap-10 md:flex-row ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
               >
-                <img src={photos[p.photoIndex].src} alt={photos[p.photoIndex].alt} className="w-full max-w-xs" />
+                <img
+                  src={pillarPhoto[p.id].src}
+                  alt={pillarPhoto[p.id].alt}
+                  className="w-full max-w-xs object-cover"
+                />
                 <div className="flex-1 text-center md:text-left">
                   <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">{`0${i + 1}`}</p>
                   <h3 className="mb-5 text-2xl font-light tracking-wide">{p.title}</h3>
