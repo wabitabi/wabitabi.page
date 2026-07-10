@@ -5,8 +5,7 @@ import { resultItems } from "@/lib/data/results";
 import { BUSINESS_CATEGORY_LABEL, BusinessCategory } from "@/lib/types";
 import { Eyebrow } from "@/components/site/Eyebrow";
 
-const categoryPhoto: Record<BusinessCategory, Photo> = {
-  wellbeing: danangPhotos.street,
+const categoryPhoto: Partial<Record<BusinessCategory, Photo>> = {
   ryugaku: photos[3],
   sns: danangPhotos.cafe,
 };
@@ -35,13 +34,15 @@ export default async function ResultDetailPage({ params }: ResultDetailPageProps
           {item.title}
         </h1>
 
-        <img
-          src={categoryPhoto[item.category].src}
-          alt={item.title}
-          className="animate-fade-up animation-delay-600 mt-14 aspect-video w-full object-cover"
-        />
+        {categoryPhoto[item.category] && (
+          <img
+            src={categoryPhoto[item.category]!.src}
+            alt={item.title}
+            className="animate-fade-up animation-delay-600 mt-14 aspect-video w-full object-cover"
+          />
+        )}
 
-        <div className="mt-12 space-y-6 text-sm leading-[2.3] text-taupe">
+        <div className="animate-fade-up animation-delay-600 mt-12 space-y-6 border-t border-sand pt-10 text-sm leading-[2.3] text-taupe">
           <p>{item.summary}</p>
           <p>{item.body}</p>
         </div>

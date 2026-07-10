@@ -1,4 +1,4 @@
-import { photos, danangPhotos } from "@/lib/photos";
+import { ceoPhoto } from "@/lib/photos";
 import { VISION, CEO_NAME, CEO_TITLE } from "@/lib/site-content";
 import { PageHero } from "@/components/site/PageHero";
 import { Eyebrow } from "@/components/site/Eyebrow";
@@ -44,7 +44,7 @@ export default function AboutPage() {
           <Eyebrow className="mb-14 text-center">Profile</Eyebrow>
           <div className="flex flex-col items-center gap-12 md:flex-row md:items-start">
             <div className="w-full max-w-xs shrink-0">
-              <img src={photos[1].src} alt="代表 島添日花李" className="w-full" />
+              <img src={ceoPhoto.src} alt={ceoPhoto.alt} className="w-full" />
               <p className="mt-3 text-right text-[10px] tracking-widest text-gold">— {CEO_TITLE}</p>
             </div>
             <div className="flex-1">
@@ -121,10 +121,10 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-14">
-            <img src={danangPhotos.market.src} alt={danangPhotos.market.alt} className="w-full" />
+          <div className="mx-auto mt-14 max-w-md">
+            <img src={ceoPhoto.src} alt={ceoPhoto.alt} className="w-full" />
             <p className="mt-3 text-right text-[10px] tracking-widest text-gold">
-              — {danangPhotos.market.caption}
+              — {ceoPhoto.caption}
             </p>
           </div>
         </div>

@@ -5,6 +5,14 @@ export interface Photo {
   caption: string;
 }
 
+// 代表写真（実写真が届いたら src を差し替え。例: /images/ceo.jpg）
+export const ceoPhoto: Photo = {
+  id: 200,
+  src: "/images/photo-2.svg",
+  alt: "代表取締役 島添日花李",
+  caption: "代表取締役 島添日花李",
+};
+
 // アップロード済みの実写真
 export const heroPhoto: Photo = {
   id: 100,
