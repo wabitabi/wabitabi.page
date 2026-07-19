@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f9c66c"/>
+      <stop offset="0.5" stop-color="#f2994a"/>
+      <stop offset="1" stop-color="#d96a3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#sky)"/>
+  <!-- 飛行機雲 -->
+  <line x1="120" y1="60" x2="700" y2="330" stroke="#ffe9c4" stroke-width="14" opacity="0.8" stroke-linecap="round"/>
+  <line x1="300" y1="30" x2="760" y2="240" stroke="#ffe9c4" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
+  <!-- 熊本城シルエット -->
+  <g fill="#5a3423">
+    <polygon points="470,340 610,340 640,400 440,400"/>
+    <rect x="455" y="400" width="170" height="50"/>
+    <polygon points="430,450 650,450 680,520 400,520"/>
+    <rect x="420" y="520" width="240" height="70"/>
+    <polygon points="390,590 690,590 720,680 360,680"/>
+    <rect x="380" y="680" width="320" height="120"/>
+    <polygon points="520,290 560,290 585,340 495,340"/>
+  </g>
+  <!-- 松 -->
+  <g fill="#4a3020">
+    <circle cx="700" cy="640" r="46"/>
+    <circle cx="748" cy="600" r="36"/>
+    <rect x="694" y="660" width="16" height="140"/>
+  </g>
+  <!-- 見上げる人物シルエット -->
+  <g fill="#3f2417">
+    <circle cx="150" cy="480" r="58"/>
+    <path d="M70 800 Q80 560 150 545 Q225 560 235 800 Z"/>
+  </g>
+  <text x="400" y="770" text-anchor="middle" font-family="sans-serif" font-size="26" fill="#ffedd0">[写真4] 夕焼けの熊本城と見上げる女性</text>
+</svg>
