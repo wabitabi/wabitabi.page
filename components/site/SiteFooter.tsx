@@ -3,7 +3,6 @@ import Link from "next/link";
 const sitemap = [
   { label: "私たちについて", href: "/about" },
   { label: "サービス", href: "/services" },
-  { label: "実績紹介", href: "/results" },
   { label: "会社情報", href: "/company" },
   { label: "お知らせ", href: "/news" },
   { label: "お問い合わせ", href: "/contact" },

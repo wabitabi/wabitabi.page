@@ -1,5 +1,5 @@
 import { ceoPhoto } from "@/lib/photos";
-import { VISION, CEO_NAME, CEO_TITLE } from "@/lib/site-content";
+import { VISION, MISSION, CEO_NAME, CEO_TITLE } from "@/lib/site-content";
 import { PageHero } from "@/components/site/PageHero";
 import { Eyebrow } from "@/components/site/Eyebrow";
 
@@ -20,21 +20,27 @@ export default function AboutPage() {
         lead="世界を見ることは、人生の選択肢を自分の手で広げること。情報の格差を、挑戦の格差にしないために——。私たちの原点をご紹介します。"
       />
 
-      {/* ビジョン・ミッション */}
+      {/* ビジョン */}
       <section className="py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <Eyebrow className="mb-10">Vision / Mission</Eyebrow>
-          <h2 className="text-2xl font-light leading-[2.2] tracking-wider md:text-3xl">{VISION}</h2>
-          <div className="mx-auto mt-12 max-w-2xl space-y-6 text-left text-sm leading-[2.2] text-taupe">
-            <p>
-              留学や海外挑戦を、特別な人だけのものではなく、誰もが自分らしさを見つけるための手段として届けたい。
-              私たちはそう考えています。
-            </p>
-            <p>
-              ポジティブ心理学・行動分析の知見をベースに、単なる語学留学ではなく「自己理解」と「行動変容」に
-              つながる体験を設計すること。それが、WABITABIのすべての事業に共通する軸です。
-            </p>
-          </div>
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <Eyebrow className="mb-8">Vision</Eyebrow>
+          <h2 className="text-2xl font-light leading-[2] tracking-wider md:text-3xl">{VISION}</h2>
+          <p className="mx-auto mt-10 max-w-2xl text-sm leading-[2.2] text-taupe">
+            留学や海外挑戦を、特別な人だけのものではなく、誰もが自分らしさを見つけるための手段として届けたい。
+            私たちはそう考えています。
+          </p>
+        </div>
+      </section>
+
+      {/* ミッション */}
+      <section className="border-t border-sand py-24">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <Eyebrow className="mb-8">Mission</Eyebrow>
+          <h2 className="text-2xl font-light leading-[2] tracking-wider md:text-3xl">{MISSION}</h2>
+          <p className="mx-auto mt-10 max-w-2xl text-sm leading-[2.2] text-taupe">
+            ポジティブ心理学・行動分析の知見をベースに、単なる語学留学ではなく「自己理解」と「行動変容」に
+            つながる体験を設計すること。それが、WABITABIのすべての事業に共通する軸です。
+          </p>
         </div>
       </section>
 

@@ -43,6 +43,8 @@ export default function RyugakuContactPage() {
           <ContactForm
             thanksHref="/contact/ryugaku/thanks"
             submitLabel="無料相談を申し込む"
+            subject="【WABITABI】無料相談のお申し込み"
+            formType="くまもと留学相談室 無料相談"
             showProgramField
           />
         </div>

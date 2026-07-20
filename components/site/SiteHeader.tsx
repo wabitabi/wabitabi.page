@@ -3,7 +3,6 @@ import Link from "next/link";
 const navItems = [
   { label: "私たちについて", href: "/about" },
   { label: "サービス", href: "/services" },
-  { label: "実績紹介", href: "/results" },
   { label: "会社情報", href: "/company" },
   { label: "お知らせ", href: "/news" },
 ];
@@ -12,8 +11,8 @@ export function SiteHeader() {
   return (
     <header className="border-b border-sand bg-paper">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-        <Link href="/" className="text-lg tracking-[0.3em] text-ink">
-          WABITABI
+        <Link href="/" className="text-base tracking-[0.2em] text-ink md:text-lg">
+          株式会社WABITABI
         </Link>
         <nav className="hidden items-center gap-7 text-xs tracking-widest text-taupe md:flex">
           {navItems.map((item) => (

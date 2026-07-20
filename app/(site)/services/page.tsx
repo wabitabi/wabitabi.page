@@ -11,7 +11,7 @@ export default function ServicesPage() {
       <PageHero
         en="Services"
         title="サービス"
-        lead="Wellbeing留学・くまもと留学相談室・SNS PR事業。3つの事業を通じて、海外挑戦を身近なものにします。"
+        lead="Wellbeing留学・くまもと留学相談室・出張授業・SNS PR事業。4つの事業を通じて、海外挑戦を身近なものにします。"
       />
 
       {/* 事業① Wellbeing留学 */}
@@ -23,14 +23,14 @@ export default function ServicesPage() {
               <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">01 — WELLBEING RYUGAKU</p>
               <h2 className="mb-6 text-2xl font-light tracking-wide">Wellbeing留学</h2>
               <div className="space-y-4 text-sm leading-[2.1] text-taupe">
-                <p>女性（18〜25歳）を対象とした、2週間の起業・インターンプログラムです。</p>
+                <p>18〜25歳の女性を対象とした、2週間のキャリア育成プログラムです。</p>
                 <p>
-                  開催地はベトナム・ダナン。第1期は10名が参加し、第2期（8/26〜9/8、最大12名）を計画中です。
+                  舞台はベトナム・ダナン。実践型インターンシップで、起業家精神（アントレプレナーシップ）を
+                  育みながら、自分のキャリアと本気で向き合います。
                 </p>
                 <p>
-                  ライフデザインワークショップ、事業立ち上げインターン、SNS研修など、自己理解と実践的な
-                  挑戦を組み合わせた構成。卒業生（アルムナイ）が次期プログラムをサポートする、
-                  紹介・還元の仕組みも大切にしています。
+                  プログラム終了後も、卒業生同士がずっとつながり続けられるコミュニティがあります。
+                  第1期は10名が参加し、第2期（8/26〜9/8、最大12名）を計画中です。
                 </p>
               </div>
               <Link
@@ -55,7 +55,7 @@ export default function ServicesPage() {
               <div className="space-y-4 text-sm leading-[2.1] text-taupe">
                 <p>地域に根ざした、無料の留学相談窓口です。熊本県内の中学校・高校・大学と連携しています。</p>
                 <p>セブ島を中心に、ハワイ・バリ・フィジーの語学留学を専門にサポート。</p>
-                <p>教育委員会や高校生サミットでの登壇実績があり、InstagramやTikTokでも情報発信中です。</p>
+                <p>InstagramやTikTokでも情報発信中です。</p>
               </div>
               <div className="mt-8 border border-gold/40 bg-paper p-6">
                 <p className="mb-4 text-xs leading-relaxed text-taupe">
@@ -73,25 +73,54 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 事業③ SNS PR事業 */}
-      <section id="sns" className="scroll-mt-20 py-24">
+      {/* 事業③ 出張授業 */}
+      <section id="shucchou" className="scroll-mt-20 py-24">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-12 md:flex-row">
+            <img src={photos[0].src} alt="出張授業のイメージ" className="w-full max-w-sm object-cover" />
+            <div className="flex-1">
+              <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">03 — GUEST LECTURES</p>
+              <h2 className="mb-6 text-2xl font-light tracking-wide">出張授業</h2>
+              <div className="space-y-4 text-sm leading-[2.1] text-taupe">
+                <p>
+                  実際に海外挑戦をして自分らしく生きる身近な先輩から、子どもたちへ。
+                </p>
+                <p>
+                  海外挑戦という選択肢を「自分ごと」にし、全ての子どもたちの可能性を広げます。
+                  学校や地域での出張授業のご依頼を承っています。
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="mt-8 inline-block border-b border-gold pb-1 text-xs tracking-[0.2em] transition hover:text-gold"
+              >
+                出張授業について問い合わせる
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 事業④ SNS PR事業 */}
+      <section id="sns" className="scroll-mt-20 border-t border-sand bg-linen py-24">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="flex flex-col items-center gap-12 md:flex-row-reverse">
             <img src={danangPhotos.cafe.src} alt={danangPhotos.cafe.alt} className="w-full max-w-sm object-cover" />
             <div className="flex-1">
-              <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">03 — SNS PR</p>
+              <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">04 — SNS PR</p>
               <h2 className="mb-6 text-2xl font-light tracking-wide">SNS PR事業</h2>
               <div className="space-y-4 text-sm leading-[2.1] text-taupe">
-                <p>総フォロワー6万人超の発信力を活かし、企業のSNS PRを企画から運用までサポートします。</p>
+                <p>総フォロワー6万人超の発信力で、企業のSNSのPRを行います。</p>
+                <p>分析・調査・企画・撮影・編集まで、すべてサポートします。</p>
                 <p>
                   実績例：株式会社アールイーカンパニー、PLAUD株式会社、株式会社トリファ、熊本城北自動車学校 ほか
                 </p>
               </div>
               <Link
-                href="/results?category=sns"
+                href="/contact"
                 className="mt-8 inline-block border-b border-gold pb-1 text-xs tracking-[0.2em] transition hover:text-gold"
               >
-                PR実績を見る
+                SNS PRについて問い合わせる
               </Link>
             </div>
           </div>

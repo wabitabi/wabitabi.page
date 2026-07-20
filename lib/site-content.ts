@@ -1,7 +1,9 @@
-// デザイン案10パターンで共通利用するサイトコンテンツ
-export const VISION = "海外挑戦を通じて、自分らしく生きる人を増やす";
+// サイト全体で共通利用するコンテンツ
+export const VISION = "どこに生まれても、誰もが自分らしい人生を選べる社会へ";
+export const MISSION = "海外挑戦というきっかけで、自分らしく生きる人を増やす。";
 
-export const VISION_LINES = ["海外挑戦を通じて、", "自分らしく生きる人を増やす"] as const;
+// /designs 参照用（2行表示のデザインモックで使用）
+export const VISION_LINES = ["どこに生まれても、", "誰もが自分らしい人生を選べる社会へ"] as const;
 
 export const SUB_COPY =
   "熊本から、心理学にもとづく体験設計で「はじめての一歩」に伴走します。";
@@ -11,27 +13,34 @@ export const PILLARS = [
     id: "wellbeing",
     title: "Wellbeing留学",
     en: "Wellbeing Ryugaku",
-    desc: "18〜25歳の女性を対象にした2週間の起業・インターンプログラム。ベトナム・ダナンで自己理解と実践的な挑戦を。",
-    photoIndex: 4, // photo-5: ベトナムの路地
+    desc: "18〜25歳の女性を対象にした、2週間のキャリア育成プログラム。舞台はベトナム・ダナン。実践型インターンシップで、起業家精神（アントレプレナーシップ）を育みながら、自分のキャリアと本気で向き合います。",
+    photoIndex: 4,
   },
   {
     id: "ryugaku",
     title: "くまもと留学相談室",
     en: "Kumamoto Ryugaku Soudan",
-    desc: "熊本の中高大と連携する無料の留学相談窓口。セブ島を中心に、ハワイ・バリ・フィジーの語学留学を専門にサポート。",
-    photoIndex: 3, // photo-4: 熊本城
+    desc: "熊本の中高大と連携する、無料の留学相談窓口。セブ島を中心に、ハワイ・バリ・フィジーの語学留学を専門にサポートします。",
+    photoIndex: 3,
+  },
+  {
+    id: "shucchou",
+    title: "出張授業",
+    en: "Guest Lectures",
+    desc: "実際に海外挑戦をして自分らしく生きる身近な先輩から子どもたちへ。海外挑戦という選択肢を自分ごとにし、全ての子どもたちの可能性を広げます。",
+    photoIndex: 0,
   },
   {
     id: "sns",
     title: "SNS PR事業",
     en: "SNS PR",
-    desc: "総フォロワー6万人超の発信力で、企業のSNS PRを企画から運用まで。数々のPR実績。",
-    photoIndex: 2, // photo-3: カフェPC
+    desc: "総フォロワー6万人超の発信力で、企業のSNSのPRを行います。分析・調査・企画・撮影・編集まで、すべてサポートします。",
+    photoIndex: 2,
   },
 ] as const;
 
 export const CEO_MESSAGE =
-  "33カ国を旅し、ハンガリーで学び、インドで働いた原体験から確信しています。海外挑戦は特別な人のものではなく、自分らしさに出会うための、いちばん確かな方法だということを。";
+  "世界を見ることは、自分自身の可能性を広げ、自分自身を知ることができます。海外挑戦をきっかけに、自分らしい道を切り開いていきましょう。";
 
 export const CEO_NAME = "島添日花李";
 export const CEO_TITLE = "代表取締役";

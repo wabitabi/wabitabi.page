@@ -28,7 +28,12 @@ export default function ContactPage() {
               無料相談フォームへ
             </Link>
           </div>
-          <ContactForm thanksHref="/contact/thanks" submitLabel="送信する" />
+          <ContactForm
+            thanksHref="/contact/thanks"
+            submitLabel="送信する"
+            subject="【WABITABI】お問い合わせ"
+            formType="お問い合わせ"
+          />
         </div>
       </section>
     </>
