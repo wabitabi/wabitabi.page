@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { photos } from "@/lib/photos";
+import { soudanPhoto } from "@/lib/photos";
 import { PageHero } from "@/components/site/PageHero";
 import { ContactForm } from "@/components/site/ContactForm";
+import { SmartImage } from "@/components/site/SmartImage";
 
 export const metadata = { title: "無料相談申込｜くまもと留学相談室" };
 
@@ -22,7 +23,7 @@ export default function RyugakuContactPage() {
 
       <section className="py-20">
         <div className="mx-auto max-w-4xl px-6">
-          <img src={photos[0].src} alt={photos[0].alt} className="mx-auto aspect-video w-full max-w-2xl object-cover" />
+          <SmartImage photo={soudanPhoto} className="mx-auto aspect-video w-full max-w-2xl object-cover" />
           <div className="mx-auto mt-16 grid max-w-3xl gap-8 md:grid-cols-3">
             {points.map((pt) => (
               <div key={pt.title} className="border-t border-gold pt-5 text-center md:text-left">

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { photos, danangPhotos, Photo } from "@/lib/photos";
+import { danangPhotos, ryugakuPhoto, Photo } from "@/lib/photos";
 import { resultItems } from "@/lib/data/results";
 import { BUSINESS_CATEGORY_LABEL, BusinessCategory } from "@/lib/types";
 import { Eyebrow } from "@/components/site/Eyebrow";
+import { SmartImage } from "@/components/site/SmartImage";
 
 const categoryPhoto: Partial<Record<BusinessCategory, Photo>> = {
-  ryugaku: photos[3],
+  ryugaku: ryugakuPhoto,
   sns: danangPhotos.cafe,
 };
 
@@ -35,8 +36,8 @@ export default async function ResultDetailPage({ params }: ResultDetailPageProps
         </h1>
 
         {categoryPhoto[item.category] && (
-          <img
-            src={categoryPhoto[item.category]!.src}
+          <SmartImage
+            photo={categoryPhoto[item.category]!}
             alt={item.title}
             className="animate-fade-up animation-delay-600 mt-14 aspect-video w-full object-cover"
           />

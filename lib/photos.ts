@@ -3,14 +3,48 @@ export interface Photo {
   src: string;
   alt: string;
   caption: string;
+  // 実写真が無い間に表示する代替画像（SmartImageが src の読み込み失敗時に使用）
+  fallback?: string;
 }
 
-// 代表写真（実写真が届いたら src を差し替え。例: /images/ceo.jpg）
+// ===== 実写真アップロード用の名前付きスロット =====
+// src は最終的なファイル名を指す。ファイルを public/images/ に置くだけで自動反映され、
+// 未アップロードの間は fallback のプレースホルダーを表示（コード変更不要）。
+
+// 代表写真（私たちについて：プロフィール・創業ストーリー）
 export const ceoPhoto: Photo = {
   id: 200,
-  src: "/images/photo-2.svg",
+  src: "/images/ceo.jpg",
+  fallback: "/images/photo-2.svg",
   alt: "代表取締役 島添日花李",
   caption: "代表取締役 島添日花李",
+};
+
+// くまもと留学相談室（トップ・サービス・実績）
+export const ryugakuPhoto: Photo = {
+  id: 201,
+  src: "/images/ryugaku.jpg",
+  fallback: "/images/photo-4.svg",
+  alt: "くまもと留学相談室の相談風景",
+  caption: "くまもと留学相談室",
+};
+
+// 出張授業（トップ・サービス）
+export const guestLecturePhoto: Photo = {
+  id: 202,
+  src: "/images/guest-lecture.jpg",
+  fallback: "/images/photo-1.svg",
+  alt: "学校での出張授業の様子",
+  caption: "出張授業",
+};
+
+// 無料相談ページ上部
+export const soudanPhoto: Photo = {
+  id: 203,
+  src: "/images/soudan.jpg",
+  fallback: "/images/photo-1.svg",
+  alt: "無料相談の様子",
+  caption: "まずは気軽に、無料相談から",
 };
 
 // アップロード済みの実写真

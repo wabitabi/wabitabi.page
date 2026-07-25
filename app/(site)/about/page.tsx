@@ -2,6 +2,7 @@ import { ceoPhoto } from "@/lib/photos";
 import { VISION, MISSION, CEO_NAME, CEO_TITLE } from "@/lib/site-content";
 import { PageHero } from "@/components/site/PageHero";
 import { Eyebrow } from "@/components/site/Eyebrow";
+import { SmartImage } from "@/components/site/SmartImage";
 
 export const metadata = { title: "私たちについて｜株式会社WABITABI" };
 
@@ -50,7 +51,7 @@ export default function AboutPage() {
           <Eyebrow className="mb-14 text-center">Profile</Eyebrow>
           <div className="flex flex-col items-center gap-12 md:flex-row md:items-start">
             <div className="w-full max-w-xs shrink-0">
-              <img src={ceoPhoto.src} alt={ceoPhoto.alt} className="w-full" />
+              <SmartImage photo={ceoPhoto} className="w-full" />
               <p className="mt-3 text-right text-[10px] tracking-widest text-gold">— {CEO_TITLE}</p>
             </div>
             <div className="flex-1">
@@ -128,7 +129,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mx-auto mt-14 max-w-md">
-            <img src={ceoPhoto.src} alt={ceoPhoto.alt} className="w-full" />
+            <SmartImage photo={ceoPhoto} className="w-full" />
             <p className="mt-3 text-right text-[10px] tracking-widest text-gold">
               — {ceoPhoto.caption}
             </p>

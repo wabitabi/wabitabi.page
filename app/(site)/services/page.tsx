@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { photos, danangPhotos } from "@/lib/photos";
+import { danangPhotos, ryugakuPhoto, guestLecturePhoto } from "@/lib/photos";
 import { PageHero } from "@/components/site/PageHero";
 import { Eyebrow } from "@/components/site/Eyebrow";
+import { SmartImage } from "@/components/site/SmartImage";
 
 export const metadata = { title: "サービス｜株式会社WABITABI" };
 
@@ -48,7 +49,7 @@ export default function ServicesPage() {
       <section id="ryugaku" className="scroll-mt-20 border-t border-sand bg-linen py-24">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-12 md:flex-row-reverse">
-            <img src={photos[3].src} alt={photos[3].alt} className="w-full max-w-sm" />
+            <SmartImage photo={ryugakuPhoto} className="w-full max-w-sm object-cover" />
             <div className="flex-1">
               <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">02 — KUMAMOTO RYUGAKU SOUDAN</p>
               <h2 className="mb-6 text-2xl font-light tracking-wide">くまもと留学相談室</h2>
@@ -77,7 +78,7 @@ export default function ServicesPage() {
       <section id="shucchou" className="scroll-mt-20 py-24">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-12 md:flex-row">
-            <img src={photos[0].src} alt="出張授業のイメージ" className="w-full max-w-sm object-cover" />
+            <SmartImage photo={guestLecturePhoto} className="w-full max-w-sm object-cover" />
             <div className="flex-1">
               <p className="mb-2 text-[10px] tracking-[0.3em] text-gold">03 — GUEST LECTURES</p>
               <h2 className="mb-6 text-2xl font-light tracking-wide">出張授業</h2>

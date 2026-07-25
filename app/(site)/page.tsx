@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { photos, danangPhotos, Photo } from "@/lib/photos";
+import { danangPhotos, ryugakuPhoto, guestLecturePhoto, Photo } from "@/lib/photos";
 import { VISION, MISSION, PILLARS, CEO_MESSAGE, CEO_NAME, CEO_TITLE } from "@/lib/site-content";
 import { newsItems } from "@/lib/data/news";
 import { BUSINESS_CATEGORY_LABEL } from "@/lib/types";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { HeroParallax } from "@/components/site/HeroParallax";
+import { SmartImage } from "@/components/site/SmartImage";
 
 export const metadata = {
   title: "株式会社WABITABI｜海外挑戦を、自分らしく生きるきっかけに",
@@ -13,8 +14,8 @@ export const metadata = {
 // 事業ごとの写真（くまもと留学相談室・出張授業は実写真が届くまでプレースホルダー）
 const pillarPhoto: Record<string, Photo> = {
   wellbeing: danangPhotos.beach,
-  ryugaku: photos[3],
-  shucchou: photos[0],
+  ryugaku: ryugakuPhoto,
+  shucchou: guestLecturePhoto,
   sns: danangPhotos.cafe,
 };
 
@@ -48,9 +49,8 @@ export default function TopPage() {
                 key={p.id}
                 className={`flex flex-col items-center gap-10 md:flex-row ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
               >
-                <img
-                  src={pillarPhoto[p.id].src}
-                  alt={pillarPhoto[p.id].alt}
+                <SmartImage
+                  photo={pillarPhoto[p.id]}
                   className="w-full max-w-xs object-cover"
                 />
                 <div className="flex-1 text-center md:text-left">

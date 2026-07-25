@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CategoryFilter } from "@/components/site/CategoryFilter";
-import { photos, danangPhotos, Photo } from "@/lib/photos";
+import { danangPhotos, ryugakuPhoto, Photo } from "@/lib/photos";
 import { resultItems } from "@/lib/data/results";
 import { BUSINESS_CATEGORY_LABEL, BusinessCategory } from "@/lib/types";
+import { SmartImage } from "@/components/site/SmartImage";
 
 // カテゴリごとの代表写真（wellbeingは写真なし、ryugakuは実写真が届くまでプレースホルダー）
 const categoryPhoto: Partial<Record<BusinessCategory, Photo>> = {
-  ryugaku: photos[3],
+  ryugaku: ryugakuPhoto,
   sns: danangPhotos.cafe,
 };
 
@@ -35,8 +36,8 @@ export function ResultsList() {
             >
               {photo && (
                 <div className="overflow-hidden">
-                  <img
-                    src={photo.src}
+                  <SmartImage
+                    photo={photo}
                     alt={item.title}
                     className="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                   />
